@@ -1,15 +1,13 @@
 #!/usr/bin/python3
-# 100-weight_average.py
+square_matrix_map = \
+    __import__('101-square_matrix_map').square_matrix_map
 
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
 
-def weight_average(my_list=[]):
-    """Return the weighted average of all integers in a list of tuples."""
-    if not isinstance(my_list, list) or len(my_list) == 0:
-        return (0)
-
-    avg = 0
-    size = 0
-    for tup in my_list:
-        avg += (tup[0] * tup[1])
-        size += tup[1]
-    return (avg / size)
+new_matrix = square_matrix_map(matrix)
+print(new_matrix)
+print(matrix)
